@@ -1,5 +1,6 @@
 .section--profile{
   position: relative;
+  height: unset;
   min-height: 100vh;
   overflow: hidden;
   .container{
@@ -9,12 +10,16 @@
     align-items: center;
   }
 }
-@media screen and (min-width: 1024) {
+@media screen and (min-width: 1024px) {
   .section--profile{
     .container{
-      min-height: 100vh;
       display: block;
     }
+  }
+}
+@media screen and (min-height: 1700px) {
+  .section--profile{
+    height: 100vh;
   }
 }
 .bg-top--accent{
@@ -40,20 +45,30 @@
   }
 }
 .logo--wrapper{
-  max-width: 125px;
+  max-width: 200px;
   margin: 0 auto;
   img{ width: 100%; }
   z-index: 10;
+}
+@media screen and (min-width: 600px) {
+  .logo--wrapper{
+    max-width: 250px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-height: 800px) {
+  .logo--wrapper{
+    max-width: 125px;
+  }
 }
 .link-web--wrapper{
   text-align: center;
   a{ color: $white; }
 }
 .photo-profile--wrapper{
-  margin: 60px auto 20;
+  margin: 60px auto 20px;
   border-radius: 50%;
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   background: linear-gradient(180deg, $secondary 0%, $white 39.58%, $white 61.98%, $secondary 100%);
   position: relative;
   &::before{
@@ -78,18 +93,18 @@
     transform: translate(-50%, -50%);
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 620px) {
   .photo-profile--wrapper{
     width: 600px;
     height: 600px;
   }
 }
-@media screen and (min-width: 1024px) and (max-height: 780px) {
+@media screen and (min-width: 1024px) and (max-height: 800px) {
   .photo-profile--wrapper{
     margin-top: 16px;
     margin-bottom: 0;
-    width: 250px;
-    height: 250px;
+    width: 250px !important;
+    height: 250px !important;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -102,11 +117,11 @@
 .icon--wrapper{
   position: relative;
   background-color: $black;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   img{
-    width: 20px;
+    width: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -133,7 +148,14 @@
   }
   .add--address{ display: block; }
 }
-@media screen and (min-width: 1024px) and (max-height: 780px) {
+@media screen and (min-width: 1024px) and (max-height: 800px) {
+  .icon--wrapper{
+    width: 40px;
+    height: 40px;
+    img{
+      width: 20px;
+    }
+  }
   .contact--wrapper{
     display: flex;
     justify-content: space-between;
@@ -141,9 +163,11 @@
     width: 100%;
     margin-top: 16px;
     a{
-      margin: 0;
       gap: 8px;
       font-size: 16px;
+      &:not(:last-child){
+        margin-bottom: 0;
+      }
     }
     .add--address{
       display: none;
@@ -162,7 +186,7 @@
 }
 @media screen and (min-height: 2000px) {
   .contact--wrapper{
-    margin-bottom: 200px;
+    margin-bottom: 300px;
   }
 }
 
@@ -179,7 +203,7 @@
     width: 200px;
   }
 }
-@media screen and (min-width: 1024px) and (max-height: 780px) {
+@media screen and (min-width: 1024px) and (max-height: 800px) {
   .bg-bottom--accent{
     display: none;
   }
