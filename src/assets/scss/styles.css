@@ -95,12 +95,15 @@
 }
 .photo-profile--wrapper img {
   width: 82%;
+  height: 82%;
   border-radius: 50%;
   z-index: 10;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 620px) {
